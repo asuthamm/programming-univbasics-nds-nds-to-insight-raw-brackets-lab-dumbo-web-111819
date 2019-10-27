@@ -13,17 +13,17 @@ def directors_totals(nds)
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
   idx1 = 0
-while idx1 < director_database.length
-  sum=0
-  idx2 = 0
-  while idx2 < director_database[idx1][:movies].length
-    # p director_database[idx1][:movies][idx2][:worldwide_gross]
-    sum += director_database[idx1][:movies][idx2][:worldwide_gross]
-    idx2 +=1
+  while idx1 < director_database.length
+    sum=0
+    idx2 = 0
+    while idx2 < director_database[idx1][:movies].length
+      # p director_database[idx1][:movies][idx2][:worldwide_gross]
+      sum += director_database[idx1][:movies][idx2][:worldwide_gross]
+      idx2 +=1
+    end
+    result[director_database[idx1][:name]] = sum
+    idx1 +=1
   end
-  result[director_database[idx1][:name]] = sum
-  idx1 +=1
-end
   # ...
   # ...
   # ...
